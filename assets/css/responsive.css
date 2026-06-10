@@ -1,0 +1,41 @@
+/* ─── Responsive ─────────────────────────────────── */
+@media (max-width:1024px) {
+  .hero { flex-direction:column; text-align:center; padding:60px 0; }
+  .hero-content { max-width:100%; }
+  .hero-btns { justify-content:center; }
+  .hero-graphic { display:none; }
+  .wiki-layout { grid-template-columns:1fr; }
+  .wiki-sidebar { position:static; }
+  .profile-layout { grid-template-columns:1fr; }
+  .profile-sidebar { position:static; }
+}
+
+@media (max-width:768px) {
+  .main-nav { display:none; flex-direction:column; position:absolute; top:64px; left:0; right:0; background:var(--bg2); border-bottom:1px solid var(--border); padding:16px 20px; gap:4px; z-index:999; }
+  .main-nav.open { display:flex; }
+  .mobile-menu-btn { display:flex; }
+  .hero h1 { font-size:2.2rem; }
+  .page-title { font-size:1.8rem; }
+  .minigame-layout { grid-template-columns:1fr; }
+  .mg-sidebar { display:grid; grid-template-columns:repeat(2,1fr); }
+  .mg-grid { aspect-ratio:unset; height:280px; }
+  .lb-controls { flex-direction:column; align-items:stretch; }
+  .lb-tabs { flex-wrap:wrap; }
+  .collection-controls { flex-direction:column; }
+  .collection-controls .form-input { max-width:100%; }
+  .auth-card { padding:24px 20px; }
+  .auth-wrap { align-items:flex-start; padding-top:30px; }
+}
+
+@media (max-width:480px) {
+  .header-inner { padding:0 12px; }
+  .container { padding:0 12px; }
+  .hero h1 { font-size:1.8rem; }
+  .card-grid.two, .card-grid.three, .card-grid.four { grid-template-columns:1fr; }
+  .collection-grid { grid-template-columns:repeat(2,1fr); }
+  .mg-sidebar { grid-template-columns:1fr; }
+  .tabs { flex-wrap:wrap; }
+  .tab-btn { padding:8px 12px; font-size:13px; }
+  .profile-stats-mini { gap:8px; }
+  .section { padding:24px 0; }
+}

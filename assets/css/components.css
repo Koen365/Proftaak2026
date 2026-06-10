@@ -1,0 +1,26 @@
+/* ─── Additional component styles ────────────────── */
+
+/* Status badges */
+.badge { display:inline-block; padding:3px 9px; border-radius:20px; font-size:11px; font-weight:700; }
+.badge-success { background:rgba(76,175,80,.15);  color:#66bb6a; border:1px solid rgba(76,175,80,.3); }
+.badge-warning { background:rgba(255,152,0,.15);  color:#ffa726; border:1px solid rgba(255,152,0,.3); }
+.badge-danger  { background:rgba(244,67,54,.15);  color:#ef5350; border:1px solid rgba(244,67,54,.3); }
+.badge-info    { background:rgba(33,150,243,.15); color:#42a5f5; border:1px solid rgba(33,150,243,.3); }
+
+/* Spinner */
+.spinner {
+  width:36px; height:36px;
+  border:3px solid var(--border);
+  border-top-color:var(--accent);
+  border-radius:50%; animation:spin .8s linear infinite;
+  margin:20px auto;
+}
+@keyframes spin { to{transform:rotate(360deg)} }
+
+/* Modal */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:2000; align-items:center; justify-content:center; padding:20px; }
+.modal.open { display:flex; }
+.modal-content { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:28px; width:100%; max-width:500px; max-height:90vh; overflow-y:auto; position:relative; }
+.modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.modal-close { background:none; border:none; font-size:22px; cursor:pointer; color:var(--text-muted); }
+.modal-close:hover { color:var(--text); }

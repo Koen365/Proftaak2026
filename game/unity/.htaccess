@@ -1,0 +1,20 @@
+# Unity WebGL – serve compressed build files correctly
+# Uncomment the block that matches your Unity compression setting.
+
+# ── Gzip (default Unity setting) ─────────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddEncoding gzip .gz
+    AddType application/octet-stream .data.gz
+    AddType application/javascript   .framework.js.gz
+    AddType application/wasm         .wasm.gz
+    AddType application/javascript   .loader.js
+</IfModule>
+
+# ── Brotli (Unity "Brotli" compression setting) ───────────────────────────────
+# <IfModule mod_mime.c>
+#     AddEncoding br .br
+#     AddType application/octet-stream .data.br
+#     AddType application/javascript   .framework.js.br
+#     AddType application/wasm         .wasm.br
+#     AddType application/javascript   .loader.js
+# </IfModule>
